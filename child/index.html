@@ -1,0 +1,43 @@
+​<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>jQuery UI Tabs with cookie</title>
+        <link rel="stylesheet"
+            href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <a href="../">Go back to <b>/tabs</b></a>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">First</a></li>
+                <li><a href="#tabs-2">Second</a></li>
+                <li><a href="#tabs-3">Third</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>First tab's content...</p>
+            </div>
+            <div id="tabs-2">
+                <p>Second tab's content...</p>
+            </div>
+            <div id="tabs-3">
+                <p>Third tab's content...</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("#tabs").tabs({
+                    cookie: {
+                        // store cookie for a day, without, it would be a session cookie
+                        expires: 1,
+                        path: '/tabs/child'
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
