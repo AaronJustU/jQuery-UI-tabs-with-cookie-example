@@ -2,3 +2,9 @@ a {
     color: #2A70BF;
     text-decoration: none;
 }
+.btn, #tabs {
+    margin: 5px;
+}
+.ui-widget {
+    font-size: 12px;
+}
